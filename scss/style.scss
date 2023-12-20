@@ -1157,14 +1157,17 @@ input[type="search"]::-webkit-search-clear-button {
 // =======================================================
 .sale {
     margin: 65px 0;
-    position: relative;
     background-color: var(--clr3);
 
     @media (max-width: 768px) {
         margin: 50px 0;
     }
 
-    &__inner {
+    &__inner{
+        position: relative;
+    }
+
+    &__body {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -1224,14 +1227,14 @@ input[type="search"]::-webkit-search-clear-button {
     &__img--bg {
         position: absolute;
         top: -50px;
-        right: 350px;
+        right: 300px;
         width: 476px;
         z-index: 1;
         animation: rotate 6s ease-in-out 0s infinite;
 
         @media (max-width: 1250px) {
             width: calc(276px + (476 - 276) * ((100vw - 768px) / (1250 - 768)));
-            right: calc(50px + (350 - 50) * ((100vw - 768px) / (1250 - 768)));
+            right: calc(50px + (300 - 50) * ((100vw - 768px) / (1250 - 768)));
         }
 
         @media (max-width: 650px) {
@@ -1247,7 +1250,7 @@ input[type="search"]::-webkit-search-clear-button {
     &__img--bg1 {
         position: absolute;
         top: 0px;
-        right: -50px;
+        right: -100px;
         width: 538px;
         z-index: 1;
         animation: rotate2 3s ease-in-out 0s infinite;
@@ -1260,7 +1263,7 @@ input[type="search"]::-webkit-search-clear-button {
         @media (max-width: 650px) {
             top: inherit;
             bottom: -20px;
-            right: 0;
+            right: -15px;
             width: calc(210px + (330 - 210) * ((100vw - 320px) / (650 - 320)));
         }
     }
@@ -1335,7 +1338,7 @@ input[type="search"]::-webkit-search-clear-button {
         display: none;
 
         &.active {
-            display: block;
+            display: block; 
 
         }
     }
@@ -1617,7 +1620,7 @@ input[type="search"]::-webkit-search-clear-button {
         &::before {
             content: '';
             position: absolute;
-            top: -170px;
+            top: -215px;
             right: -350px;
             background: url('../img/footer/element.png') 0 0 / 100% no-repeat;
             width: 400px;
